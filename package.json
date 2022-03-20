@@ -6,6 +6,12 @@
   "author": "Alexandre C. Pinheiro",
   "license": "MIT",
   "scripts": {
+    "docker:build": "docker build -t rentalx .",
+    "docker:run": "docker run --name rentalx-container -p 3333:3333 rentalx",
+    "docker:exec" : "docker exec -it rentalx-container /bin/bash",
+    "docker:start" : "docker container start rentalx-container",
+    "docker:stop" : "docker container stop rentalx-container",
+    "docker:logs" : "docker logs rentalx-container -f",
     "start": "yarn tsc && node dist/server.js",
     "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts"
   },
