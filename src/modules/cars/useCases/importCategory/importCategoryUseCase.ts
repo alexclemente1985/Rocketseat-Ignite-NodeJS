@@ -29,6 +29,8 @@ class ImportCategoryUseCase {
           categories.push({ name, description });
         })
         .on("end", () => {
+          /** Remove o upload assim que dados são armazenados no banco */
+          fs.promises.unlink(file.path);
           resolve(categories);
         })
         .on("error", (error) => {
