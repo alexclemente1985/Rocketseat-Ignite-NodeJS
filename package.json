@@ -17,7 +17,11 @@
     "docker:exec": "docker exec -it rentx-container /bin/bash",
     "dcompose:up": "docker-compose up --force-recreate",
     "dcompose:down": "docker-compose down",
-    "dcompose:start": "docker-compose start"
+    "dcompose:start": "docker-compose start",
+    "typeorm": "ts-node-dev ./node_modules/typeorm/cli",
+    "migration:create": "yarn typeorm migration:create -n",
+    "migration:run": "yarn typeorm migration:run",
+    "migration:revert": "yarn typeorm migration:revert"
   },
   "dependencies": {
     "csv-parse": "^5.0.4",
