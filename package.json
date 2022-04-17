@@ -10,12 +10,12 @@
     "docker:build": "docker build -t rentx .",
     "docker:run": "docker run -p 3333:3333 --name rentx-container rentx",
     "docker:logs": "docker logs rentx-container -f",
-    "docker:start":"docker start rentx-container",
+    "docker:start": "docker start rentx-container",
     "docker:stop": "docker stop rentx-container",
     "docker:rmcontainer": "docker container rm rentx-container",
     "docker:rmimage": "docker image rm rentx",
     "docker:exec": "docker exec -it rentx-container /bin/bash",
-    "dcompose:up" : "docker-compose up --force-recreate",
+    "dcompose:up": "docker-compose up --force-recreate",
     "dcompose:down": "docker-compose down",
     "dcompose:start": "docker-compose start"
   },
@@ -23,8 +23,10 @@
     "csv-parse": "^5.0.4",
     "express": "^4.17.3",
     "multer": "^1.4.4",
+    "pg": "^8.7.3",
     "reflect-metadata": "^0.1.13",
     "swagger-ui-express": "^4.3.0",
+    "typeorm": "0.2.45",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

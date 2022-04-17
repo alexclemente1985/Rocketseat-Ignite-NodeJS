@@ -33,7 +33,7 @@ yarn docker:run
 ```
 
 ## Criação de container a partir da imagem do projeto usando docker-compose
-> *Cria um container a partir da imagem do projeto, na porta 3333, usando o arquivo docker-compose*
+> *Cria um container a partir da imagem do projeto, na porta 3333, usando o arquivo docker-compose, iniciando também todos os services relacionados*
 
 ```
 docker-compose up --force-recreate
@@ -140,6 +140,34 @@ ou
 
 ```
 yarn dcompose:start
+```
+
+## TypeORM
+
+### Versão
+Projeto utiliza a versão 0.2.45, requisitando a criação de arquivo **ormconfig.json** na raiz do projeto.
+
+```
+yarn add typeorm@0.2.45 reflect-metadata
+```
+
+Requer também a instalação da tipagem para node
+
+```
+yarn add -D @types/node
+```
+
+É necessário também a alteração dos seguintes campos do arquivo **tsconfig.json**:
+```
+"emitDecoratorMetadata": true,
+"experimentalDecorators": true,
+```
+
+### Banco de dados utilizado
+Foi utilizado o postgres para o projeto.
+
+```
+yarn add pg
 ```
 
 ## Documentação do projeto
