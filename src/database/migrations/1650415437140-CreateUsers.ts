@@ -15,11 +15,11 @@ export class CreateUsers1650415437140 implements MigrationInterface {
                         name: "name",
                         type: "varchar"
                     },
-                   /*  {
+                    {
                         name: "username",
                         type: "varchar",
                         isUnique: true
-                    }, */
+                    },
                     {
                         name: "password",
                         type: "varchar"
