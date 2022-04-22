@@ -6,6 +6,10 @@ COPY package.json ./
 
 RUN npm install
 
+#Solve the bcrypt invalid ELF header problem reinstaling it
+RUN npm uninstall bcrypt
+RUN npm i bcrypt
+
 COPY . .
 
 EXPOSE 3333
