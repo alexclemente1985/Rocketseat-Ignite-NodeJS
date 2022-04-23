@@ -6,7 +6,7 @@
   "author": "Alexandre Clemente Pinheiro",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/shared/infra/http/server.ts",
     "docker:build": "docker build -t rentx .",
     "docker:run": "docker run -p 3333:3333 --name rentx-container rentx",
     "docker:logs": "docker logs rentx-container -f",
