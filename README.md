@@ -5,9 +5,9 @@ Server NodeJS responsável pelo gerenciamento de aluguéis de veículos.
 
 ## Regras de negócio da aplicação
 > **_Legenda:_**
->> **RF**: *Requisito Funcional*
->> **RNF**: *Requisito Não-Funcional*
->> **RN**: *Regras de Negócio*
+>> **RF**: *Requisito Funcional;*
+>> **RNF**: *Requisito Não-Funcional;*
+>> **RN**: *Regras de Negócio;*
 
 ### Cadastro de carro
 **RF**
