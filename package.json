@@ -23,7 +23,8 @@
     "migration:create": "yarn typeorm migration:create -n",
     "migration:run": "yarn typeorm migration:run",
     "migration:revert": "yarn typeorm migration:revert",
-    "test": "yarn remove bcrypt && yarn add bcrypt && jest"
+    "test": "yarn remove bcrypt && yarn add bcrypt && jest",
+    "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
