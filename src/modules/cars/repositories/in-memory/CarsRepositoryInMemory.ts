@@ -1,5 +1,4 @@
 import { Car } from "../../infra/typeorm/entities/Car";
-import { Category } from "../../infra/typeorm/entities/Category";
 import { ICarsRepository, ICreateCarDTO } from "../../interfaces/ICarsRepository";
 
 class CarsRepositoryInMemory implements ICarsRepository{
@@ -48,6 +47,10 @@ class CarsRepositoryInMemory implements ICarsRepository{
         }
   
         return all;
+    }
+
+    async findById(id: string): Promise<Car>{
+        return this.cars.find(car => car.id === id);
     }
 }
 
