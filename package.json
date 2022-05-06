@@ -23,7 +23,7 @@
     "migration:create": "yarn typeorm migration:create -n",
     "migration:run": "yarn typeorm migration:run",
     "migration:revert": "yarn typeorm migration:revert",
-    "test": "yarn remove bcrypt && yarn add bcrypt && jest",
+    "test": "yarn remove bcrypt && yarn add bcrypt && NODE_ENV=test jest --runInBand",
     "seed:admin": "ts-node-dev src/shared/infra/typeorm/seed/admin.ts"
   },
   "dependencies": {
@@ -48,6 +48,7 @@
     "@types/jsonwebtoken": "^8.5.8",
     "@types/multer": "^1.4.7",
     "@types/node": "^17.0.24",
+    "@types/supertest": "^2.0.12",
     "@types/swagger-ui-express": "^4.1.3",
     "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.19.0",
@@ -59,6 +60,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
     "prettier": "^2.6.2",
+    "supertest": "^6.2.3",
     "ts-jest": "^27.1.4",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.6.3"
